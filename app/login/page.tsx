@@ -1,6 +1,20 @@
 "use client";
 
-export default function Login() {
+import { faListCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import { FormEvent } from "react";
+
+export default function LoginPage() {
+
+  function handleSubmit(
+    event: FormEvent<HTMLFormElement>
+  ) {
+    event.preventDefault();
+
+    console.log("Login");
+  }
+
   return (
     <main className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-10">
       <section className="w-full max-w-md rounded-xl bg-white p-6 shadow-md sm:p-8">

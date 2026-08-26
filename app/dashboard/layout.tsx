@@ -1,9 +1,13 @@
 import React from "react";
 import "../globals.css"
 
+import Sidebar from "@/app/components/Sidebar";
 
 export default function DashboardLayout({ children }: Readonly<{children: React.ReactNode;}>) {
   return (
-    <main className="bg-slate-50 min-h-full">{children}</main>
+    <div className="min-h-screen bg-slate-50">
+      <Sidebar />
+      {children}
+      </div>
   );
 }

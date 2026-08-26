@@ -1,5 +1,18 @@
+"use client";
 
-export default function Register() {
+import Link from "next/link";
+import { FormEvent } from "react";
+
+export default function RegisterPage() {
+
+  function handleSubmit(
+    event: FormEvent<HTMLFormElement>
+  ) {
+    event.preventDefault();
+
+    console.log("Registro");
+  }
+
   return (
     <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
       <main className="flex min-h-screen items-center justify-center bg-slate-100 px-4 py-10">
